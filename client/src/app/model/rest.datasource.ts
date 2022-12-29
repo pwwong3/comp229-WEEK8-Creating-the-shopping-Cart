@@ -11,7 +11,7 @@ export class restdatasource
   baseUrl:string;
   constructor(private http: HttpClient)
   {
-  this.baseUrl = '${PROTOCOL}://${location.hostname}:${PORT}/';
+  this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
   }
   getBooks():Observable<Book[]>
   {

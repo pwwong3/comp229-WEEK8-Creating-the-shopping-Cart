@@ -13,7 +13,6 @@ export class BookStoreComponent  {
   public selectedAuthor = "";
   public selectedPage = 1;
   public booksPerPage = 4;
-  changePage:any;
 
   constructor(private repository:BookRepository,
               private cart:Cart) { }
@@ -37,7 +36,7 @@ changeAuthor(newAuthor:string=""):void
 
 //function slice(pageIndex: number, arg1: number) {
   //throw new Error('Function not implemented.');
-  ChangePage(newPage: number) : void
+  changePage(newPage: number) : void
   {
     this.selectedPage = newPage;
 
@@ -45,7 +44,7 @@ changeAuthor(newAuthor:string=""):void
   changePagesize(newSize: number): void
   {
     this.booksPerPage = Number(newSize);
-    this.ChangePage(1);
+    this.changePage(1);
 
   }
   get pageCount(): number
